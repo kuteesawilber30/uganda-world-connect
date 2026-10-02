@@ -1,12 +1,275 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Uganda World Connect - connecting Uganda to Africa and the World"><title>Uganda World Connect</title><link rel="stylesheet" href="style.css"></head><body>
-<div class="top"><div>UGANDA WORLD CONNECT <span>Information • News • Knowledge • Community</span></div></div>
-<header class="brand"><div class="brand-inner"><a class="logo" href="#home">U<small>WC</small></a><div><h1>UGANDA WORLD CONNECT</h1><p>Connecting Uganda to Africa and the World</p></div></div></header>
-<nav><a href="#home">Home</a><a href="#topics">Topics</a><a href="#news">News</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-<section class="hero" id="home"><div class="hero-inner"><div><small>WELCOME TO UGANDA WORLD CONNECT</small><h2>Uganda, Africa and the World — Connected.</h2><p>A growing information platform for news, knowledge, community stories, business, technology, education and agriculture.</p><a class="btn" href="#topics">Explore Topics</a> <a class="btn outline" href="#gallery">View Gallery</a></div><div class="hero-card"><div>🌍</div><h3>Connect • Learn • Discover</h3><p>Useful information and stories from Uganda and beyond.</p></div></div></section>
-<section class="section" id="topics"><h2>Our Topics</h2><p>Explore information and stories. You can add or change the text under each topic later.</p><div class="topics"><article><b>🇺🇬</b><h3>Uganda</h3><p>People, places, culture, events and useful information about Uganda.</p></article><article><b>🌍</b><h3>Africa</h3><p>Stories, developments and knowledge from across Africa.</p></article><article><b>🌎</b><h3>World</h3><p>International stories, ideas and important developments.</p></article><article><b>💼</b><h3>Business</h3><p>Entrepreneurship, careers, markets and opportunities.</p></article><article><b>💻</b><h3>Technology</h3><p>Technology, digital skills, innovation and useful tools.</p></article><article><b>🎓</b><h3>Education</h3><p>Learning resources, training, scholarships and careers.</p></article><article><b>🌱</b><h3>Agriculture</h3><p>Farming, food production, markets and rural communities.</p></article><article><b>👥</b><h3>Community</h3><p>Community stories, people, events and initiatives.</p></article></div></section>
-<section class="section light" id="news"><h2>News & Information</h2><p>This area is ready for your articles. Replace the sample stories with your own content.</p><div class="cards"><article><div class="pic one">UGANDA</div><div class="body"><span>Uganda</span><h3>Stories from Uganda</h3><p>Add your latest Uganda story, article or useful information here.</p></div></article><article><div class="pic two">AFRICA</div><div class="body"><span>Africa</span><h3>Across Africa</h3><p>Add information and stories from African countries here.</p></div></article><article><div class="pic three">WORLD</div><div class="body"><span>World</span><h3>World Information</h3><p>Add international news, explainers and useful knowledge here.</p></div></article></div></section>
-<section class="section" id="gallery"><h2>Gallery</h2><p>Show photos from Uganda, Africa, community events, agriculture, business and the world.</p><div class="filters"><button class="active" data-filter="all">All</button><button data-filter="Uganda">Uganda</button><button data-filter="Africa">Africa</button><button data-filter="World">World</button><button data-filter="Community">Community</button></div><div class="gallery" id="galleryGrid"></div><div class="add-box"><h3>Add a Gallery Photo</h3><p>Choose a photo, give it a title and description, then add it. Photos added during testing are saved in this browser.</p><form id="galleryForm"><div class="formrow"><label>Photo<input id="photoFile" type="file" accept="image/*" required></label><label>Title<input id="photoTitle" required placeholder="e.g. Kampala City"></label></div><div class="formrow"><label>Category<select id="photoCategory"><option>Uganda</option><option>Africa</option><option>World</option><option>Community</option></select></label><label>Description<input id="photoDescription" placeholder="Short description"></label></div><button class="btn" type="submit">Add Photo</button></form></div></section>
-<section class="section light" id="about"><div class="narrow"><h2>About Uganda World Connect</h2><p>Uganda World Connect is a general information platform connecting readers with stories, knowledge and useful information from Uganda, Africa and around the world.</p><p>The website can grow over time with articles, original photos, community stories, educational resources, business information and other useful content.</p></div></section>
-<section class="section" id="contact"><h2>Contact Us</h2><p>For information, stories, partnerships or general enquiries:</p><div class="contacts"><div><b>📞 Phone</b><a href="tel:0777587254">0777 587 254</a><a href="tel:0772121879">0772 121 879</a></div><div><b>✉️ Email</b><p>Add your website email here later.</p></div><div><b>📍 Location</b><p>Uganda</p></div></div></section>
-<footer><h3>UGANDA WORLD CONNECT</h3><p>Connecting Uganda to Africa and the World.</p><p class="copy">© <span id="year"></span> Uganda World Connect. All rights reserved.</p></footer>
-<div class="modal" id="modal"><button id="close">×</button><img id="modalImg"><p id="caption"></p></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Uganda World Connect - connecting Uganda to Africa and the World">
+<title>Uganda World Connect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="top">
+<div>UGANDA WORLD CONNECT <span>Information • News • Knowledge • Community</span></div>
+</div>
+
+<header class="brand">
+<div class="brand-inner">
+<a class="logo" href="#home">U<small>WC</small></a>
+<div>
+<h1>UGANDA WORLD CONNECT</h1>
+<p>Connecting Uganda to Africa and the World</p>
+</div>
+</div>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#topics">Topics</a>
+<a href="#news">News</a>
+<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-inner">
+<div>
+<small>WELCOME TO UGANDA WORLD CONNECT</small>
+<h2>Uganda, Africa and the World — Connected.</h2>
+<p>A growing information platform for news, knowledge, community stories, business, technology, education and agriculture.</p>
+<a class="btn" href="#topics">Explore Topics</a>
+<a class="btn outline" href="#gallery">View Gallery</a>
+</div>
+
+<div class="hero-card">
+<div>🌍</div>
+<h3>Connect • Learn • Discover</h3>
+<p>Useful information and stories from Uganda and beyond.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="topics">
+<h2>Our Topics</h2>
+<p>Explore information, ideas, opportunities and stories covering Uganda, Africa and the wider world.</p>
+
+<div class="topics">
+
+<article>
+<b>🇺🇬</b>
+<h3>Uganda</h3>
+<p>Discover news, people, places, culture, events, business and useful information from communities across Uganda.</p>
+</article>
+
+<article>
+<b>🌍</b>
+<h3>Africa</h3>
+<p>Explore stories, developments, opportunities, culture and important events from countries across the African continent.</p>
+</article>
+
+<article>
+<b>🌎</b>
+<h3>World</h3>
+<p>Stay informed about international developments, global ideas, important events and issues affecting people around the world.</p>
+</article>
+
+<article>
+<b>💼</b>
+<h3>Business</h3>
+<p>Learn about entrepreneurship, careers, markets, small businesses, financial ideas and opportunities for growth.</p>
+</article>
+
+<article>
+<b>💻</b>
+<h3>Technology</h3>
+<p>Discover digital tools, technology trends, innovation, internet services, software and practical digital skills.</p>
+</article>
+
+<article>
+<b>🎓</b>
+<h3>Education</h3>
+<p>Find learning resources, training opportunities, scholarships, career information and ideas for lifelong learning.</p>
+</article>
+
+<article>
+<b>🌱</b>
+<h3>Agriculture</h3>
+<p>Explore farming information, modern agricultural practices, food production, markets, agribusiness and rural development.</p>
+</article>
+
+<article>
+<b>👥</b>
+<h3>Community</h3>
+<p>Share and discover community stories, local events, people, initiatives and activities making a difference.</p>
+</article>
+
+<article>
+<b>🖥️</b>
+<h3>IT & Virtual Assistance</h3>
+<p>Explore IT support, data entry, virtual assistance, remote work, digital skills, productivity tools and online career opportunities.</p>
+</article>
+
+</div>
+</section>
+
+<section class="section light" id="news">
+<h2>News & Information</h2>
+<p>This area is ready for your articles. Replace the sample stories with your own content.</p>
+
+<div class="cards">
+
+<article>
+<div class="pic one">UGANDA</div>
+<div class="body">
+<span>Uganda</span>
+<h3>Stories from Uganda</h3>
+<p>Add your latest Uganda story, article or useful information here.</p>
+</div>
+</article>
+
+<article>
+<div class="pic two">AFRICA</div>
+<div class="body">
+<span>Africa</span>
+<h3>Across Africa</h3>
+<p>Add information and stories from African countries here.</p>
+</div>
+</article>
+
+<article>
+<div class="pic three">WORLD</div>
+<div class="body">
+<span>World</span>
+<h3>World Information</h3>
+<p>Add international news, explainers and useful knowledge here.</p>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2>Gallery</h2>
+<p>Show photos from Uganda, Africa, community events, agriculture, business and the world.</p>
+
+<div class="filters">
+<button class="active" data-filter="all">All</button>
+<button data-filter="Uganda">Uganda</button>
+<button data-filter="Africa">Africa</button>
+<button data-filter="World">World</button>
+<button data-filter="Community">Community</button>
+</div>
+
+<div class="gallery" id="galleryGrid"></div>
+
+<div class="add-box">
+<h3>Add a Gallery Photo</h3>
+<p>Choose a photo, give it a title and description, then add it. Photos added during testing are saved in this browser.</p>
+
+<form id="galleryForm">
+
+<div class="formrow">
+
+<label>
+Photo
+<input id="photoFile" type="file" accept="image/*" required>
+</label>
+
+<label>
+Title
+<input id="photoTitle" required placeholder="e.g. Kampala City">
+</label>
+
+</div>
+
+<div class="formrow">
+
+<label>
+Category
+<select id="photoCategory">
+<option>Uganda</option>
+<option>Africa</option>
+<option>World</option>
+<option>Community</option>
+</select>
+</label>
+
+<label>
+Description
+<input id="photoDescription" placeholder="Short description">
+</label>
+
+</div>
+
+<button class="btn" type="submit">Add Photo</button>
+
+</form>
+</div>
+</section>
+
+<section class="section light" id="about">
+
+<div class="narrow">
+
+<h2>About Uganda World Connect</h2>
+
+<p>Uganda World Connect is a general information platform connecting readers with stories, knowledge and useful information from Uganda, Africa and around the world.</p>
+
+<p>The website can grow over time with articles, original photos, community stories, educational resources, business information, technology, IT and virtual assistance resources, and other useful content.</p>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>For information, stories, partnerships or general enquiries:</p>
+
+<div class="contacts">
+
+<div>
+<b>📞 Phone</b>
+<a href="tel:0777587254">0777 587 254</a>
+<a href="tel:0772121879">0772 121 879</a>
+</div>
+
+<div>
+<b>✉️ Email</b>
+<p>Add your website email here later.</p>
+</div>
+
+<div>
+<b>📍 Location</b>
+<p>Uganda</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>UGANDA WORLD CONNECT</h3>
+
+<p>Connecting Uganda to Africa and the World.</p>
+
+<p class="copy">
+© <span id="year"></span> Uganda World Connect. All rights reserved.
+</p>
+
+</footer>
+
+<div class="modal" id="modal">
+<button id="close">×</button>
+<img id="modalImg">
+<p id="caption"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
